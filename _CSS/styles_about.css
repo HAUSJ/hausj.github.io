@@ -1,0 +1,514 @@
+/* Globle Style
+-----------------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  font-weight: 300;
+  line-height: 2em;
+}
+
+li {
+  list-style:none;
+}
+
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
+/*navigation bar
+----------------------------------------------*/
+
+header {
+    width: 100vw;
+    position: fixed; 
+    top: 0;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background-color: #242424;
+    
+    
+}
+
+.logoContainer {
+    width:20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logoContainer img {
+    max-width: 30px;
+    min-width: 20px;
+
+}
+
+#logoText {
+	font-family: 'Open Sans', sans-serif;
+	color: #ffffff;
+	font-size: 1.1em;
+	margin-left: 20px;
+	opacity: 0;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+     -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.logoContainer:hover #logoText{
+    opacity:1;
+}
+
+
+
+/* entire container, keeps perspective */
+.flip-container {
+	-webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -o-perspective: 1000;
+    perspective: 1000;
+	padding-top: 2px;
+}
+
+/* flip the pane when hovered */
+.flip-container:hover .flipper {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);		
+}
+.flip-container, .logoFront, .logoBack {
+	width: 36px;
+	height: 36px;
+}
+.flipper {
+	
+	-webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+
+    -moz-transition: 0.6s;
+    -moz-transform-style: preserve-3d;
+
+    -o-transition: 0.6s;
+    -o-transform-style: preserve-3d;
+
+    -ms-transition: 0.6s;
+    -ms-transform-style: preserve-3d;
+
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+	position: relative;
+}
+.logoFront, .logoBack {
+	-webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.logoFront {
+	z-index: 2;
+	/* for firefox 31 */
+	-webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.logoBack {
+	-webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.navBar {
+    font-weight: 400;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    color: #ffffff;
+	font-size: 1.1em;
+    
+}
+.navBar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    color: #ffffff;
+
+}
+.navBar ul li {
+    padding-left:30px;
+}
+.navBar .current {
+    font-weight:bold;
+    border-style: solid;
+    border-color: white;
+    border-width: 0px 0px 2px 0px;
+	padding-bottom: 4px;
+}
+
+/* link on hover effect */
+.hvr-underline-from-left {
+/*
+  display: inline-block;
+  vertical-align: middle;
+*/
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+/*
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+*/
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 4px;
+}
+.hvr-underline-from-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0px;
+  background: #ffffff;
+  height: 1px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.portfolioFilter .hvr-underline-from-left:before {
+    background: #242424;
+}
+.hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before{
+  right: 0;
+}
+
+
+/* profile
+------------------------------------------*/
+.container{
+    max-width:1000px;
+    margin: 0 auto;
+}
+.profile {
+    padding-top: 100px;
+    background-color: #242424;
+    color:#fff
+}
+
+.content-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.company_logo{
+    padding-top: 8px;
+    width:50px;
+}
+.company_detail {
+    width:90%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.col-narrow {
+    width:30%;
+}
+.col-wide {
+    width:60%;
+}
+
+section{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+h2 {
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+.section {
+    max-width: 1000px;
+    margin:0 auto;
+    padding:0 1rem;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+
+.profile-img {
+    border-radius: 50%;
+}
+.profile a {
+    padding:10px 20px;
+    background-color:#00b1e2;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+
+
+/* Work Experience
+-----------------------*/
+.work {
+    background-color: #EDF2F4;
+}
+
+
+.company_logo img{
+    width:100%;
+    border-radius: 4px;
+}
+
+.employerName {
+    padding-bottom: 20px;
+    font-weight: 600;
+}
+h3~p {
+    margin:0;
+}
+
+.work h3 {
+    margin:0 auto;
+    
+}
+
+.job-description p:first-child {
+    margin-top:0;
+}
+
+.work .content-wrap {
+    padding-bottom: 40px;
+}
+.work .content-wrap:last-of-type{
+    padding-bottom: 0px;
+}
+.work ul {
+/*    padding-left: 20px;*/
+}
+.work li {
+    list-style: disc outside none;
+    padding-bottom: 10px;
+}
+.work li:last-child{
+    padding-bottom: 0px;
+}
+.work .content-wrap{
+    padding-bottom: 80px;
+}
+.work .content-wrap:last-child{
+    padding-bottom: 0px;
+}
+
+/* Education
+-----------------------*/
+
+.education {
+    background-color: #00b1e2;
+    background: linear-gradient(rgba(141,153,174,0.9), rgba(141,153,174,0.6)),url(/_Image/About/UM.jpg) no-repeat fixed;
+    background-size: cover;
+}
+
+.education .content-wrap{
+    padding-bottom: 80px;
+}
+.education .content-wrap:last-child{
+    padding-bottom: 0px;
+}
+/* Footer
+---------------------------------------------------------------------- */   
+#footer {
+   
+	background-color: #242424;
+	margin: 0;
+	padding: 10px 1rem;
+	z-index: 99;
+    color: #ffffff;
+}
+    
+.footerContainer {
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    }
+    
+
+.copyright {
+	font-family: 'Open Sans', sans-serif;
+	color: #ffffff;
+	font-size: 0.8em;
+    padding-bottom: 5px;
+	}
+
+.footerEmail {
+	font-family: 'Open Sans', sans-serif;
+	color: #ffffff;
+	font-size: 0.8em;
+	text-align: center;
+
+	}
+
+.social {
+	padding: 12px 0 0 0;
+	text-align: right;}
+    
+	
+.social li {
+	display: inline;
+	margin: 0 10px 0 0;}
+	
+.social li:last-child {
+	margin: 0 0 0 0;}
+
+.social img {
+	width: 16px;
+	height: 16px;
+	-webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -o-perspective: 1000;
+    perspective: 1000;
+	-webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+}
+	
+#footer .social img:hover {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	-webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;}
+
+
+
+@media (max-width:650px) {
+    header {
+        flex-direction: column;
+        padding: 0px;
+        width:100%;
+        background-color: #242424;
+        position:relative;
+    }
+    .logoContainer {
+        justify-content: center;
+        width: 100%;
+        margin:0 auto;
+        padding:20px 0px 30px 0px;
+
+    }
+    .navBar ul {
+        justify-content: center;
+        margin:0 auto;
+        padding:10px;
+        background-color: #242424;
+        width:100%;
+
+    }
+    .navBar ul li {
+        padding:0px 20px 0px 20px;
+        
+    }  
+    #logoText {
+        display:none;
+    }
+    .main-nav-scrolled{
+        position: fixed;
+        width:100%;
+        top:0;      
+    }
+    main {
+        font-size:0.8em;
+    }
+    .profile .content-wrap {
+        flex-direction: column;
+    }
+    .company_detail {
+    width:80%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+    .col-narrow,.col-wide {
+    width:100%;
+    }
+    .col-narrow {
+        margin-bottom:20px;
+    }
+    .profile {
+        padding-top:20px;
+    }
+    .profile img {
+    max-width:220px;
+    display:inline-block;
+    margin:0 auto;
+    border-radius: 50%
+    }
+    .footerContainer {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    }
+    h1,h2 {
+        width:100%;
+        text-align: center;
+    }
+    h1 {
+        padding-top:20px;
+    }
+    .work h3 {
+    margin:0 auto 0px;
+    
+}
+    .employerName {
+    padding-bottom: 0px;
+    font-weight: 600;
+}
+
+        
+}

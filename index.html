@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hao Jiang - Product Designer</title>
+    <link rel="icon" href="/logo/1x/Asset%201.png">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link rel="stylesheet" href="/_CSS/styles_main.css">
+         <!--Sticky Nav Bar-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        var  mn = $(".navBar");
+        var  mns = "main-nav-scrolled";
+        var  hdr = $(".logoContainer").height();
+
+          $(window).scroll(function() {
+              if( $(this).scrollTop()>hdr ){
+                mn.addClass(mns);
+              } 
+              else {
+                mn.removeClass(mns);
+              }
+            });
+        
+    </script>
+    <!--Typed.js-->
+    <script src="/_JS/typed.js"></script>
+    <script>
+        $('document').ready(function(){
+        
+        var typed = new Typed('.typed', {
+            strings: ['&gt;&nbsp;&nbsp;My name is <strong>Hao Jiang</strong>.', '&gt;&nbsp;&nbsp;My name is <strong>Hao Jiang</strong>.<br>&gt;&nbsp;&nbsp;I <i>was</i> an architecture designer.', '&gt;&nbsp;&nbsp;My name is <strong>Hao Jiang</strong>.<br>&gt;&nbsp;&nbsp;I ^1000am an architect-turned^800 <strong>UI/UX designer</strong>.'],
+            typeSpeed: 60,
+            backSpeed: 20,
+            smartBackspace: true, // this is a default
+            loop: true
+        });
+        });
+    </script>
+
+    
+</head>
+    
+<body>
+    <header>
+        <div class="logoContainer">
+            <a href="index.html">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="logoFront">
+                            <img src="/logo/logo_white.png" alt="hao logo">
+                        </div>
+                        <div class="logoBack">
+                            <img src="/logo/logo_white.png" alt="hao logo">
+                        </div>
+                    </div>
+                </div>  
+            </a>
+            <p id="logoText" >HAO JIANG</p>
+        </div>
+        <nav class="navBar">
+            <ul>
+                <li><a class="hvr-underline-from-left current" href="index.html">Work</a></li>
+                <li><a class="hvr-underline-from-left" href="index.html">Blog</a></li>
+                <li><a class="hvr-underline-from-left" href="About.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="firstSection">
+            <div class="typedContainer">
+                <p class="typed"></p>
+            </div>
+        </div>
+        <div class="secondSection">
+            <div class="portfolioContainer">
+                <ul class="portfolioFilter">
+                    
+                    <li>
+                        <button type="button" class="hvr-underline-from-left filter mixitup-control-active" data-filter="all">All</button>
+                    </li>
+                    
+                    <li >
+                        <button type="button" class="hvr-underline-from-left filter" data-filter=".uiux" >UI / UX</button>
+                    </li>
+                    
+                    <li >
+                        <button type="button" class="hvr-underline-from-left filter" data-filter=".code">Coding</button>
+                    </li>
+                    
+                    <li >
+                        <button type="button" class="hvr-underline-from-left filter" data-filter=".arch">Architecture</button>
+                    </li>       
+                    
+                </ul>
+                
+                <div class="portfolioGrid">
+                    
+                      <div class="mix uiux">
+                        <a href="Portfolio/IKEA%20Place.html">
+                            <div class="portfolioBox">
+                                <div class="portfolio1">
+                                    <div class="portfolioBoxTitle">IKEA Place</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="mix uiux">
+                        <a href="Portfolio/Vords.html">
+                            <div class="portfolioBox">
+                                <div class="portfolio2">
+                                    <div class="portfolioBoxTitle">Vords</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="mix uiux">
+                        <a href="Portfolio/YouBulletube.html">
+                            <div class="portfolioBox">
+                                <div class="portfolio3">
+                                    <div class="portfolioBoxTitle">YouBulleTube</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="mix code">
+                        <a href="#">
+                            <div class="portfolioBox">
+                                <div class="portfolio4">
+                                    <div class="portfolioBoxTitle">Stranger Valley</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="mix arch">
+                        <a href="#">
+                            <div class="portfolioBox">
+                                <div class="portfolio5">
+                                    <div class="portfolioBoxTitle">Urban Nodes</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="mix code arch">
+                        <a href="#">
+                            <div class="portfolioBox">
+                                <div class="portfolio6">
+                                    <div class="portfolioBoxTitle" >Robotics</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="mix arch">
+                        <a href="#">
+                            <div class="portfolioBox">
+                                <div class="portfolio7">
+                                    <div class="portfolioBoxTitle">Pink Zone</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="mix arch">
+                        <a href="#">
+                            <div class="portfolioBox">
+                                <div class="portfolio8">
+                                    <div class="portfolioBoxTitle">Solid to Void
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="gap">
+                        <a>
+                            <div class="portfolioBox">
+                                
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="gap">
+                        <a>
+                            <div class="portfolioBox">
+                                
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+            
+            
+                <div class="footerContainer">
+
+                      <div class="copyright">Copyright © Hao Jiang 2010 - 2019</div> 
+                       
+                      <div class="footerEmail">haoran@gmail.com</div>  
+                      
+                      <div class="social">
+                            <ul>                      
+                                  <li><a href="https://www.linkedin.com/in/hao-jiang-434980116/" target="_blank"><img id="" src="/_Image/icon/1x/Linkedin_white.png" alt="Linkedin"></a></li>
+                                  
+                                  <li><a href="#"><img id="" src="/_Image/icon/1x/Dribble_white.png" alt="Dribbble"></a></li>
+                                  
+                                  <li><a href="#"><img id="" src="/_Image/icon/1x/medium_white.png" alt="Medium"></a></li>
+                                  
+                                  <li><a href="https://www.instagram.com/haohaoran/" target="_blank"><img id="" src="/_Image/icon/1x/Ins_white.png" alt="Instagram"></a></li>
+                                  
+                                  <li><a href="https://vimeo.com/user61704514" target="_blank"><img id="" src="/_Image/icon/1x/Vimeo_white.png" alt="Vimeo"></a></li>    
+                            </ul>  
+                      </div><!--end of social--> 
+                      
+                
+                </div><!--end of container-->
+            
+    </footer>
+    </main>
+
+
+    
+    <!--Mix it up (portfolio sorting effect)-->
+    <script src="/_JS/mixitup.min.js"></script>
+
+    <script>
+        var containerEl = document.querySelector('.portfolioGrid');
+
+        var mixer = mixitup(containerEl);
+    </script>  
+    <script>
+        var  mn = $(".navBar");
+        var  mns = "main-nav-scrolled";
+        var  hdr = $(".logoContainer").height();
+
+          $(window).scroll(function() {
+              if( $(this).scrollTop()>hdr ){
+                mn.addClass(mns);
+              } 
+              else {
+                mn.removeClass(mns);
+              }
+            });
+        
+    </script>
+    
+
+    
+    
+</body>
+    
